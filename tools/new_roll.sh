@@ -21,8 +21,8 @@ if [[ -z $roll_name ]]; then
 fi
 
 
-if [[ ! -d "$roll_name" ]]; then
-	mkdir -p "./roles/${roll_name}/{tasks,handlers,files,templates,vars,defaults,meta}"
+if [[ ! -d ./roles/${roll_name} ]]; then
+	mkdir -p ./roles/${roll_name}/{tasks,handlers,files,templates,vars,defaults,meta}
 else
 	echo "Nope: A folder named: ${roll_name} already exists."
 	exit 0
